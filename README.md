@@ -1,6 +1,8 @@
 # Zieselmaus
 
-A fast, elegant and modern Gopher Client for Android.
+A fast, elegant and modern Gopher Client for Android. Forked from
+[rtyler/Zieselmaus](https://github.com/rtyler/Zieselmaus) which is itself the fork of
+[afonsotrepa/PocketGopher](https://github.com/afonsotrepa/PocketGopher)
 
 
 ### Features
@@ -14,17 +16,11 @@ A fast, elegant and modern Gopher Client for Android.
 
 ### Installation
 
-This fork from 'rtyler/Zieselmaus' compiles on Debian Trixie with  OpenJDK Java runtime v21.
-Also the compiled apk runs on Android v16 while both [rtyler/Zieselmaus] and [afonsotrepa/PocketGopher] refused to install.
+This fork from [rtyler/Zieselmaus](https://github.com/rtyler/Zieselmaus) compiles on Debian Trixie with  OpenJDK Java runtime v21.
+Also the compiled apk runs on Android v16 while both [rtyler/Zieselmaus](https://github.com/rtyler/Zieselmaus) and [afonsotrepa/PocketGopher](https://github.com/afonsotrepa/PocketGopher) refused to install.
 
-Note: when apk installed manually (via direct download) only 'debug' version works.
-I do not know why, yet to be investigated, but 'release' version refuses to install.
-
-### Note
-
-The [rtyler/Zieselmaus](https://github.com/rtyler/Zieselmaus) is the fork of
-[afonsotrepa/PocketGopher](https://github.com/afonsotrepa/PocketGopher)
-
+Note: when apk installed manually (via direct download) only  the 'debug' version works.
+I do not know why, but the 'release' version refuses to install.
 
 ### License
 
