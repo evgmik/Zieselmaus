@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace "com.gmail.afonsotrepa.pocketgopher"
     compileSdkVersion 27
-    buildToolsVersion "30.0.2"
+    buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "com.gmail.afonsotrepa.pocketgopher"
         minSdkVersion 21
