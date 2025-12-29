@@ -156,9 +156,8 @@ public class MenuActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-        switch (item.getItemId())
+	if (item.getItemId() == R.id.addBookmarkButton)
         {
-            case R.id.addBookmarkButton:
                 try
                 {
                     new Bookmark(getApplicationContext(), "", '1', selector, server, port)
@@ -170,8 +169,9 @@ public class MenuActivity extends AppCompatActivity
                 }
 
                 return true;
-
-            case R.id.link:
+	}
+	else if (item.getItemId() == R.id.link)
+	{
                 //create the dialog to be shown when the button gets clicked
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
                 alertDialog.setMessage("URL:");
@@ -218,12 +218,15 @@ public class MenuActivity extends AppCompatActivity
 
                 return true;
 
-            case R.id.refresh:
+	}
+	else if (item.getItemId() == R.id.refresh)
+	{
                 this.recreate();
 
                 return true;
-
-            default:
+	}
+	else
+	{
                 return super.onOptionsItemSelected(item);
         }
     }

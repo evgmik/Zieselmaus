@@ -155,9 +155,8 @@ public class TextFileActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-        switch (item.getItemId())
+        if (item.getItemId() == R.id.addBookmarkButton)
         {
-            case R.id.addBookmarkButton:
                 try
                 {
                     new Bookmark(getApplicationContext(), "", '0', selector, server, port)
@@ -169,13 +168,15 @@ public class TextFileActivity extends AppCompatActivity
                 }
 
                 return true;
-
-            case R.id.downloadButton:
+	}
+	else if (item.getItemId() == R.id.downloadButton)
+	{
                 p.download(this);
 
                 return true;
-
-            case R.id.link:
+	}
+	else if (item.getItemId() == R.id.link)
+	{
                 //create the dialog to be shown when the button gets clicked
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
                 alertDialog.setMessage("URL:");
@@ -223,7 +224,9 @@ public class TextFileActivity extends AppCompatActivity
                 return true;
 
 
-            default:
+	}
+	else
+	{
                 return super.onOptionsItemSelected(item);
         }
     }

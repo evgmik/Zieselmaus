@@ -71,15 +71,14 @@ public class HistoryActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-        switch (item.getItemId())
+        if (item.getItemId() == R.id.clearHistory)
         {
-            case R.id.clearHistory:
                 History.clear(this);
 
                 return true;
-
-
-            default:
+	}
+	else
+	{
                 return super.onOptionsItemSelected(item);
         }
     }

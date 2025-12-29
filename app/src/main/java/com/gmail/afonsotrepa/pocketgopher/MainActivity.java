@@ -193,9 +193,8 @@ public class MainActivity extends AppCompatActivity
         // get a dialog builder
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 
-        switch (item.getItemId())
+        if (item.getItemId() == R.id.monospace_font)
         {
-            case R.id.monospace_font:
                 if (font == R.style.serif)
                 {
                     font = R.style.monospace;
@@ -214,8 +213,9 @@ public class MainActivity extends AppCompatActivity
                 this.recreate();
 
                 return true;
-
-            case R.id.font_size:
+	}
+       	else if (item.getItemId() == R.id.font_size)
+	{
                 //create the font size number picker
                 final NumberPicker numberPicker = new NumberPicker(this);
                 numberPicker.setMinValue(1);
@@ -251,7 +251,9 @@ public class MainActivity extends AppCompatActivity
 
                 return true;
 
-            case R.id.link:
+	}
+	else if (item.getItemId() == R.id.link)
+	{
                 //create the dialog to be shown when the button gets clicked
                 alertDialog.setMessage("URL:");
 
@@ -295,14 +297,18 @@ public class MainActivity extends AppCompatActivity
 
                 return true;
 
-            case R.id.history:
+	}
+       	else if (item.getItemId() == R.id.history)
+	{
                 Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
                 startActivity(intent);
 
                 return true;
 
 
-            default:
+	}
+       	else 
+	{
                 return super.onOptionsItemSelected(item);
         }
     }
