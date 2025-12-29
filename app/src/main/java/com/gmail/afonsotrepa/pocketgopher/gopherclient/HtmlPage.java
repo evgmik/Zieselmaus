@@ -87,19 +87,19 @@ public class HtmlPage extends Page
             if (selector.matches("URL:(.*)"))
             {
                 //open the url in the browser
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(selector.substring(selector.indexOf(':') + 1)));
-                context.startActivity(intent);
+		// Intent intent = new Intent(Intent.ACTION_VIEW);
+		// intent.setData(Uri.parse(selector.substring(selector.indexOf(':') + 1)));
+		// context.startActivity(intent);
             }
 
             else if (selector.matches("GET (.*)"))
             {
                 //open the url in the browser
                 String url = "http://" + server + selector.substring(selector.indexOf('T') + 2);
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); //needed for API 19
-                intent.setData(Uri.parse(url));
-                context.startActivity(intent);
+		// Intent intent = new Intent(Intent.ACTION_VIEW);
+		// intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); //needed for API 19
+		// intent.setData(Uri.parse(url));
+		// context.startActivity(intent);
 
             }
 
@@ -123,10 +123,10 @@ public class HtmlPage extends Page
                             conn.getBinary(page.selector, file);
 
                             // attempt view intent (possible ActivityNotFoundException)
-                            Intent intent = new Intent(Intent.ACTION_VIEW);
-                            intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                            intent.setData(Uri.fromFile(file));
-                            context.startActivity(intent);
+			    // Intent intent = new Intent(Intent.ACTION_VIEW);
+			    // intent.addCategory(Intent.CATEGORY_BROWSABLE);
+			    // intent.setData(Uri.fromFile(file));
+			    // context.startActivity(intent);
                         }
                         catch (final IOException | ActivityNotFoundException e)
                         {
